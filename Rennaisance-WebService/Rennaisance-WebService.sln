@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rennaisance-WebService", "Rennaisance-WebService\Rennaisance-WebService.csproj", "{BD7C20A8-E701-4A56-8409-84D9A9B5FA4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rennaisance-WebService", "Rennaisance-WebService\Rennaisance-WebService.csproj", "{3AD8D2DF-298A-4E9E-B04B-DD3B987AA009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD7C20A8-E701-4A56-8409-84D9A9B5FA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD7C20A8-E701-4A56-8409-84D9A9B5FA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD7C20A8-E701-4A56-8409-84D9A9B5FA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD7C20A8-E701-4A56-8409-84D9A9B5FA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD8D2DF-298A-4E9E-B04B-DD3B987AA009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD8D2DF-298A-4E9E-B04B-DD3B987AA009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD8D2DF-298A-4E9E-B04B-DD3B987AA009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD8D2DF-298A-4E9E-B04B-DD3B987AA009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
