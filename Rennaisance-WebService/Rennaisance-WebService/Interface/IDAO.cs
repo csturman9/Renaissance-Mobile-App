@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 
 namespace Rennaisance_WebService.Interface
 {
-    interface IDAO
+    public interface IDao <TEntity, TId>
     {
-        //add announcement
-        //get announcement id
-        //get all announcements
-        //edit announcement
-        //delete announcement
+        TEntity Get(TId id);
 
-        //can add dao operations for appointment and media
+        IList<TEntity> GetAll();
+
+    }
+
+    public interface ISupportsSave<TEntity, TId>
+    {
+        TId Save(TEntity entity);
+
+        void Update(TEntity entity);
+    }
 
 
+    public interface ISupportsDeleteDao<TEntity>
+    {
+        void Delete(TEntity entity);
     }
 }

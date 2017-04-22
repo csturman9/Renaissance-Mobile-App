@@ -9,4 +9,6 @@ namespace Rennaisance_WebService.Interface
     interface IService
     {
     }
+
+
 }
