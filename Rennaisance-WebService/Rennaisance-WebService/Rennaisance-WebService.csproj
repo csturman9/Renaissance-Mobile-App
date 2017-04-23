@@ -112,17 +112,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interface\IAnnouncementDAO.cs" />
-    <Compile Include="Interface\IAnnouncementService.cs" />
     <Compile Include="Models\Announcement.cs" />
     <Compile Include="Interface\IDAO.cs" />
-    <Compile Include="Interface\IService.cs" />
     <Compile Include="Models\HibernateDao.cs" />
     <Compile Include="Models\HibernateAnnouncementDao.cs" />
     <Compile Include="Models\ServiceAnnouncement.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\GeneralAnnouncement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AnnouncementService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
