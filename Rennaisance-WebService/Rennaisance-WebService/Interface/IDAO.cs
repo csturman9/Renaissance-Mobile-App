@@ -11,7 +11,6 @@ namespace Rennaisance_WebService.Interface
         TEntity Get(TId id);
 
         IList<TEntity> GetAll();
-
     }
 
     public interface ISupportsSave<TEntity, TId>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- CONFIGURATIONS-->
+<objects xmlns="http://www.springframework.net"
+   xmlns:db="http://www.springframework.net/database"
+   xmlns:tx="http://www.springframework.net/tx">
+
+
+  <!--<object type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="databaseSettings"/>
+  </object>-->
+
+
+  <!-- Database Configuration -->
+  <db:provider id="DbProvider"
+                   provider="System.Data.SqlClient"
+                   connectionString="Data Source=NEWTON-PC\SQLEXPRESS;Initial Catalog=Renn_App_DB;Integrated Security=True"/>
+
+
+  <!-- configure session factory -->
+  <object id="NHibernateSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate4">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>RennaisanceWebService</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="dialect" value="NHibernate.Dialect.MsSql2012Dialect"/>
+        <entry key="connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+        <entry key="show_sql" value="false" />
+        <entry key="hibernate.current_session_context_class"
+              value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate4"/>
+
+      </dictionary>
+    </property>
+
+    <!-- provides integation with Spring's declarative transaction management features -->
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+  </object>
+
+  <!-- Exception translation object post processor -->
+  <object type="Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor, Spring.Data"/>
+  <!--<object type="Rennaisance_WebService.Interface.IPersistenceExceptionTranslator, Rennaisance_WebService"/>-->
+
+
+  <!-- Configure transaction management strategy -->
+  <object id="transactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate4">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+  </object>
+
+  <tx:attribute-driven transaction-manager="transactionManager"/>
+
+  <!-- Hibernate Template -->
+  <object id="HibernateTemplate" type="Spring.Data.NHibernate.Generic.HibernateTemplate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+
+  <!-- DAO objects go here -->
+  <object id="AnnouncementDao" type="Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, RennaisanceWebService">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+  </object>
+
+  <object id="AnnouncementService" type="Rennaisance_WebService.Services.AnnouncementService, RennaisanceWebService">
+    <property name="AnnouncementDao" ref="AnnouncementDao"/>
+  </object>
+
+  <object id="AnnouncementController" type="Rennaisance_WebService.Controllers.AnnouncementController, RennaisanceWebService" singleton ="false">
+    <property name="Service" ref="AnnouncementService"/>
+  </object>
+
+  
+</objects>
