@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rennaisance_WebService.Interface
 {
-    public interface IDao <TEntity, TId>
+    public interface IDao<TEntity, TId>
     {
         TEntity Get(TId id);
 

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RennaisanceWebService")]
+[assembly: AssemblyTitle("Rennaisance_WebService")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3ad8d2df-298a-4e9e-b04b-dd3b987aa009")]
+[assembly: Guid("6b9a4ddb-18e8-4348-865f-c67c817c6029")]
 
 // Version information for an assembly consists of the following four values:
 //

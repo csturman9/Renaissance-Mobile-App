@@ -39,6 +39,5 @@ namespace Rennaisance_WebService
         {
             return _context.GetObjectsOfType(serviceType).Cast<object>();
         }
-
     }
 }

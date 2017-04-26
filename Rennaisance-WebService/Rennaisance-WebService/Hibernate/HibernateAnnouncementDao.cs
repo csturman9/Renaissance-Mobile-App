@@ -33,7 +33,7 @@ namespace Rennaisance_WebService.Hibernate
         [Transaction(ReadOnly = false)]
         public string Save(Announcement entity)
         {
-            return (string) CurrentSession.Save(entity);
+            return (string)CurrentSession.Save(entity);
         }
 
         [Transaction(ReadOnly = false)]

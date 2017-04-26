@@ -18,7 +18,7 @@ namespace Rennaisance_WebService
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
-            );           
+            );
         }
     }
 }

@@ -20,4 +20,20 @@ namespace Rennaisance_WebService.Models
         WEEKLY,
         SERVICE
     }
+
+    public class GeneralAnnouncement : Announcement
+    {
+        public virtual string Topic { get; set; }
+        public virtual string Message { get; set; }
+        public virtual string AdditonalInformation { get; set; }
+
+    }
+
+    public class ServiceAnnouncement : Announcement
+    {
+        public virtual List<string> BibleVerses { get; set; }
+        public virtual List<string> Songs { get; set; }
+        public virtual List<string> Speakers { get; set; }
+
+    }
 }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Rennaisance_WebService.Interface
 {
-    public interface IAnnouncementDao : IDao<Announcement, string>,ISupportsSave<Announcement,string>,ISupportsDeleteDao<Announcement>
+    public interface IAnnouncementDao : IDao<Announcement, string>, ISupportsSave<Announcement, string>, ISupportsDeleteDao<Announcement>
     {
+
     }
 }

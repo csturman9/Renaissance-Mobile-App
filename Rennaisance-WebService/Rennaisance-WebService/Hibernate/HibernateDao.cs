@@ -1,6 +1,4 @@
 ﻿using NHibernate;
-using Rennaisance_WebService.Interface;
-using Spring.Transaction.Interceptor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +25,6 @@ namespace Rennaisance_WebService.Hibernate
         {
             ICriteria criteria = CurrentSession.CreateCriteria<T>();
             return criteria.List<T>();
-        }       
+        }
     }
 }

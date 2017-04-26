@@ -1,8 +1,4 @@
-﻿using log4net.Config;
-using NHibernate;
-using Spring.Context;
-using Spring.Context.Support;
-using Spring.Core.IO;
+﻿using Spring.Context.Support;
 using Spring.Web.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,14 +10,10 @@ using System.Web.Routing;
 
 namespace Rennaisance_WebService
 {
-    public class WebApiApplication : SpringMvcApplication //System.Web.HttpApplication
-    {       
+    public class WebApiApplication : SpringMvcApplication 
+    {
         protected void Application_Start()
         {
-            XmlConfigurator.Configure();
-
-            AreaRegistration.RegisterAllAreas();
-
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
             DependencyResolver.SetResolver(new SpringDependencyResolver(ContextRegistry.GetContext()));
