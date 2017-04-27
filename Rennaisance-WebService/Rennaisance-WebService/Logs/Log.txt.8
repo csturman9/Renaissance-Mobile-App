@@ -1,0 +1,520 @@
+2017-04-25 22:28:39,411 [1] DEBUG Spring.Context.Support.ContextHandler [(null)] - creating context 'spring.root'
+2017-04-25 22:28:39,487 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Refreshing object factory 
+2017-04-25 22:28:39,529 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loading XML object definitions from file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml]
+2017-04-25 22:28:39,607 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Using the following XmlReader implementation : System.Xml.XsdValidatingReader
+2017-04-25 22:28:39,615 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Loading object definitions.
+2017-04-25 22:28:39,620 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Loading object definitions...
+2017-04-25 22:28:39,621 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default lazy init 'false'.
+2017-04-25 22:28:39,623 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default dependency check 'none'.
+2017-04-25 22:28:39,625 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire 'no'.
+2017-04-25 22:28:39,626 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default merge 'false'.
+2017-04-25 22:28:39,628 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:28:39,631 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:28:39,633 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire candidates ''.
+2017-04-25 22:28:39,635 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:28:39,637 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:28:39,697 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'NHibernateSessionFactory'.
+2017-04-25 22:28:39,719 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0]
+2017-04-25 22:28:39,721 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:28:39,725 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor' for object with name 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:28:39,732 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'transactionManager'.
+2017-04-25 22:28:39,743 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'HibernateTemplate'.
+2017-04-25 22:28:39,748 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'AnnouncementDao'.
+2017-04-25 22:28:39,750 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'AnnouncementService'.
+2017-04-25 22:28:39,751 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Found 11 <object> elements defining objects.
+2017-04-25 22:28:39,752 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loaded 11 object definitions from location [~//SpringConfiguration.xml]
+2017-04-25 22:28:39,754 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - Refreshed ObjectFactory for application context 'spring.root'.
+2017-04-25 22:28:39,756 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Registering well-known processors and objects
+2017-04-25 22:28:39,759 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Custom post processing object factory
+2017-04-25 22:28:39,761 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Post processing object factory using pre-registered processors
+2017-04-25 22:28:39,762 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - 11 objects defined in application context [spring.root].
+2017-04-25 22:28:39,764 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Post processing object factory using defined processors
+2017-04-25 22:28:39,787 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:28:39,794 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:28:39,798 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:28:39,799 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - processed 0 IFactoryObjectPostProcessors defined in application context [spring.root].
+2017-04-25 22:28:39,803 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:28:39,806 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:28:39,809 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -    GetObjectInternal: obtaining instance for name Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0 => canonical name Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0
+2017-04-25 22:28:39,813 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating shared instance of singleton object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'
+2017-04-25 22:28:39,818 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0' with merged definition [RootObjectDefinition : Class [Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor]; Abstract = False; Parent = ; Scope = singleton; Singleton = True; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ; defined in = file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 38].
+2017-04-25 22:28:39,819 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:28:39,825 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Eagerly caching object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0' to allow for resolving potential circular references
+2017-04-25 22:28:39,827 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'
+2017-04-25 22:28:39,832 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Setting the ObjectFactory property on the IObjectFactoryAware object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:28:39,836 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:28:39,840 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -       GetObjectInternal: obtaining instance for name &NHibernateSessionFactory => canonical name NHibernateSessionFactory
+2017-04-25 22:28:39,841 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating shared instance of singleton object 'NHibernateSessionFactory'
+2017-04-25 22:28:39,842 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'NHibernateSessionFactory' with merged definition [RootObjectDefinition : Class [Spring.Data.NHibernate.LocalSessionFactoryObject]; Abstract = False; Parent = ; Scope = singleton; Singleton = True; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ; defined in = file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 14].
+2017-04-25 22:28:39,843 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'NHibernateSessionFactory'.
+2017-04-25 22:28:39,845 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Eagerly caching object 'NHibernateSessionFactory' to allow for resolving potential circular references
+2017-04-25 22:28:39,846 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'NHibernateSessionFactory'
+2017-04-25 22:28:39,850 [1] DEBUG Spring.Objects.Factory.Support.ObjectDefinitionValueResolver [(null)] - Resolving reference from property 'DbProvider' in object 'NHibernateSessionFactory' to object 'DbProvider'.
+2017-04-25 22:28:39,852 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -          GetObjectInternal: obtaining instance for name DbProvider => canonical name DbProvider
+2017-04-25 22:28:39,853 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating shared instance of singleton object 'DbProvider'
+2017-04-25 22:28:39,854 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'DbProvider' with merged definition [RootObjectDefinition : Class [Spring.Data.Common.DbProviderFactoryObject]; Abstract = False; Parent = ; Scope = singleton; Singleton = True; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ].
+2017-04-25 22:28:39,856 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'DbProvider'.
+2017-04-25 22:28:39,857 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Eagerly caching object 'DbProvider' to allow for resolving potential circular references
+2017-04-25 22:28:39,858 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'DbProvider'
+2017-04-25 22:28:39,931 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors before initialization of object 'DbProvider'
+2017-04-25 22:28:39,936 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Calling AfterPropertiesSet() on object with name 'DbProvider'.
+2017-04-25 22:28:39,942 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors after initialization of object 'DbProvider'
+2017-04-25 22:28:39,946 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Cached shared instance of singleton object 'DbProvider'
+2017-04-25 22:28:39,951 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Object with name 'DbProvider' is a factory object.
+2017-04-25 22:28:39,953 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Dereferencing Object with name 'DbProvider'
+2017-04-25 22:28:39,960 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Refreshing object factory 
+2017-04-25 22:28:39,963 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loading XML object definitions from assembly [Spring.Data, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07], resource [Spring.Data.Common.dbproviders.xml]
+2017-04-25 22:28:39,964 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Using the following XmlReader implementation : System.Xml.XsdValidatingReader
+2017-04-25 22:28:39,980 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Loading object definitions.
+2017-04-25 22:28:39,982 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Loading object definitions...
+2017-04-25 22:28:39,983 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default lazy init 'false'.
+2017-04-25 22:28:39,985 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default dependency check 'none'.
+2017-04-25 22:28:39,986 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire 'no'.
+2017-04-25 22:28:39,987 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default merge 'false'.
+2017-04-25 22:28:39,988 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:28:39,990 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:28:39,992 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire candidates ''.
+2017-04-25 22:28:39,994 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:28:39,996 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:28:40,004 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#9643A3]
+2017-04-25 22:28:40,006 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServer-1.1'.
+2017-04-25 22:28:40,008 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#14860C3]
+2017-04-25 22:28:40,010 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServer-2.0'.
+2017-04-25 22:28:40,012 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#38B66DB]
+2017-04-25 22:28:40,013 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServer-4.0'.
+2017-04-25 22:28:40,015 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.SqlClient' for object with name 'SqlServer-2.0'.
+2017-04-25 22:28:40,017 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3E69DB5]
+2017-04-25 22:28:40,018 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServerCe-3.1'.
+2017-04-25 22:28:40,020 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#31B8B63]
+2017-04-25 22:28:40,022 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServerCe-3.5.1'.
+2017-04-25 22:28:40,023 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.SqlServerCe' for object with name 'SqlServerCe-3.5.1'.
+2017-04-25 22:28:40,025 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3F7E67C]
+2017-04-25 22:28:40,027 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OleDb-1.1'.
+2017-04-25 22:28:40,028 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3B71A63]
+2017-04-25 22:28:40,030 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OleDb-2.0'.
+2017-04-25 22:28:40,032 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#16FED80]
+2017-04-25 22:28:40,033 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OleDb-4.0'.
+2017-04-25 22:28:40,035 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.OleDb' for object with name 'OleDb-2.0'.
+2017-04-25 22:28:40,037 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#EF5984]
+2017-04-25 22:28:40,038 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleClient-2.0'.
+2017-04-25 22:28:40,040 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.OracleClient' for object with name 'OracleClient-2.0'.
+2017-04-25 22:28:40,041 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#6A25A8]
+2017-04-25 22:28:40,043 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-2.0'.
+2017-04-25 22:28:40,045 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'Oracle.DataAccess.Client' for object with name 'OracleODP-2.0'.
+2017-04-25 22:28:40,046 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3BB52ED]
+2017-04-25 22:28:40,048 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-11-2.0'.
+2017-04-25 22:28:40,050 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#195EA5D]
+2017-04-25 22:28:40,051 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-11-4.0'.
+2017-04-25 22:28:40,053 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2453D47]
+2017-04-25 22:28:40,054 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-12-2.0'.
+2017-04-25 22:28:40,056 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#6F2786]
+2017-04-25 22:28:40,058 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-12-4.0'.
+2017-04-25 22:28:40,059 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3E863BA]
+2017-04-25 22:28:40,061 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-Managed-12-4.0'.
+2017-04-25 22:28:40,063 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#32B818C]
+2017-04-25 22:28:40,065 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql'.
+2017-04-25 22:28:40,067 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#878DED]
+2017-04-25 22:28:40,068 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-1.0.9'.
+2017-04-25 22:28:40,070 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#C3FD56]
+2017-04-25 22:28:40,072 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-5.0'.
+2017-04-25 22:28:40,073 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2E3E808]
+2017-04-25 22:28:40,075 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-5.0.8.1'.
+2017-04-25 22:28:40,077 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#203284C]
+2017-04-25 22:28:40,079 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-5.1'.
+2017-04-25 22:28:40,081 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#21C6AB4]
+2017-04-25 22:28:40,083 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-5.1.4'.
+2017-04-25 22:28:40,085 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2FFC058]
+2017-04-25 22:28:40,087 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-5.2.3'.
+2017-04-25 22:28:40,088 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2FDC318]
+2017-04-25 22:28:40,090 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-6.1.3'.
+2017-04-25 22:28:40,091 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2EBDBDF]
+2017-04-25 22:28:40,093 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'MySql-6.2.2'.
+2017-04-25 22:28:40,095 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'MySql.Data.MySqlClient' for object with name 'MySql-6.2.2'.
+2017-04-25 22:28:40,097 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#24ABADD]
+2017-04-25 22:28:40,099 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Npgsql-1.0'.
+2017-04-25 22:28:40,100 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#A091CB]
+2017-04-25 22:28:40,102 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Npgsql-2.0-beta1'.
+2017-04-25 22:28:40,104 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1A5202B]
+2017-04-25 22:28:40,106 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Npgsql-2.0'.
+2017-04-25 22:28:40,107 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2CE2184]
+2017-04-25 22:28:40,109 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'DB2-9.0.0-1.1'.
+2017-04-25 22:28:40,111 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#13F2DA9]
+2017-04-25 22:28:40,113 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'DB2-9.0.0-2.0'.
+2017-04-25 22:28:40,114 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'IBM.Data.DB2' for object with name 'DB2-9.0.0-2.0'.
+2017-04-25 22:28:40,116 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3389AF1]
+2017-04-25 22:28:40,118 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'DB2-9.1.0-1.1'.
+2017-04-25 22:28:40,119 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#FD727F]
+2017-04-25 22:28:40,121 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'DB2-9.1.0.2'.
+2017-04-25 22:28:40,122 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'IBM.Data.DB2.9.1.0' for object with name 'DB2-9.1.0.2'.
+2017-04-25 22:28:40,124 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#E9067B]
+2017-04-25 22:28:40,126 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'iDB2-10.0.0.0'.
+2017-04-25 22:28:40,128 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#313A56]
+2017-04-25 22:28:40,130 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.43'.
+2017-04-25 22:28:40,132 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1BB0D09]
+2017-04-25 22:28:40,134 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.44'.
+2017-04-25 22:28:40,136 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3937555]
+2017-04-25 22:28:40,138 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.47'.
+2017-04-25 22:28:40,140 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2F2004]
+2017-04-25 22:28:40,143 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.56'.
+2017-04-25 22:28:40,146 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1A82025]
+2017-04-25 22:28:40,148 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.65'.
+2017-04-25 22:28:40,150 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2E92153]
+2017-04-25 22:28:40,152 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.66'.
+2017-04-25 22:28:40,155 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2322BEE]
+2017-04-25 22:28:40,159 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.72'.
+2017-04-25 22:28:40,162 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3C38B5F]
+2017-04-25 22:28:40,164 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SQLite-1.0.80'.
+2017-04-25 22:28:40,166 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.SQLite' for object with name 'SQLite-1.0.80'.
+2017-04-25 22:28:40,167 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1DFE657]
+2017-04-25 22:28:40,169 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Firebird-2.1'.
+2017-04-25 22:28:40,170 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'FirebirdSql.Data.FirebirdClient' for object with name 'Firebird-2.1'.
+2017-04-25 22:28:40,172 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#DF190F]
+2017-04-25 22:28:40,174 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SybaseAse-12'.
+2017-04-25 22:28:40,179 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3D7E188]
+2017-04-25 22:28:40,183 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SybaseAse-15'.
+2017-04-25 22:28:40,185 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#296EDCB]
+2017-04-25 22:28:40,188 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SybaseAse-AdoNet2'.
+2017-04-25 22:28:40,190 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#34E5C2A]
+2017-04-25 22:28:40,194 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'IfxOdbc'.
+2017-04-25 22:28:40,196 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1C13D7C]
+2017-04-25 22:28:40,198 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'IfxSQLI-3.0.0.2'.
+2017-04-25 22:28:40,200 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3CB2964]
+2017-04-25 22:28:40,202 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'IfxDRDA-9.0.0.2'.
+2017-04-25 22:28:40,204 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#224748A]
+2017-04-25 22:28:40,205 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Odbc-1.1'.
+2017-04-25 22:28:40,207 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#34818DF]
+2017-04-25 22:28:40,209 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Odbc-2.0'.
+2017-04-25 22:28:40,211 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#188DFDC]
+2017-04-25 22:28:40,213 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Odbc-4.0'.
+2017-04-25 22:28:40,214 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.Odbc' for object with name 'Odbc-2.0'.
+2017-04-25 22:28:40,216 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1CFDEC3]
+2017-04-25 22:28:40,217 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Cache-2.0.0.1'.
+2017-04-25 22:28:40,219 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'InterSystems.Data.CacheClient' for object with name 'Cache-2.0.0.1'.
+2017-04-25 22:28:40,220 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Found 51 <object> elements defining objects.
+2017-04-25 22:28:40,222 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loaded 51 object definitions from location [assembly://Spring.Data, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07/Spring.Data.Common/dbproviders.xml]
+2017-04-25 22:28:40,223 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - Refreshed ObjectFactory for application context 'DBPROVIDERFACTORY_CONTEXT'.
+2017-04-25 22:28:40,224 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Registering well-known processors and objects
+2017-04-25 22:28:40,226 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Custom post processing object factory
+2017-04-25 22:28:40,228 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Post processing object factory using pre-registered processors
+2017-04-25 22:28:40,229 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - 51 objects defined in application context [DBPROVIDERFACTORY_CONTEXT].
+2017-04-25 22:28:40,230 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Post processing object factory using defined processors
+2017-04-25 22:28:40,234 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - processed 0 IFactoryObjectPostProcessors defined in application context [DBPROVIDERFACTORY_CONTEXT].
+2017-04-25 22:28:40,237 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - processed 0 IObjectPostProcessors defined in application context [DBPROVIDERFACTORY_CONTEXT].
+2017-04-25 22:28:40,240 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - No IEventRegistry found with name 'eventRegistry' : using default 'Spring.Objects.Events.Support.EventRegistry'.
+2017-04-25 22:28:40,246 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - No IMessageSource found with name 'messageSource' : using default 'StaticMessageSource : '.
+2017-04-25 22:28:40,249 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Preinstantiating singletons
+2017-04-25 22:28:40,252 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Pre-instantiating singletons in factory [Spring.Objects.Factory.Support.DefaultListableObjectFactory]
+2017-04-25 22:28:40,255 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - Publishing event in context [DBPROVIDERFACTORY_CONTEXT] : ContextRefreshedEventArgs [Refreshed]
+2017-04-25 22:28:40,258 [1] INFO  Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Completed
+2017-04-25 22:28:40,262 [1] INFO  Spring.Data.Common.DbProviderFactory [(null)] - 51 DbProviders Available. [SqlServer-1.1,SqlServer-2.0,SqlServer-4.0,SqlServerCe-3.1,SqlServerCe-3.5.1,OleDb-1.1,OleDb-2.0,OleDb-4.0,OracleClient-2.0,OracleODP-2.0,OracleODP-11-2.0,OracleODP-11-4.0,OracleODP-12-2.0,OracleODP-12-4.0,OracleODP-Managed-12-4.0,MySql,MySql-1.0.9,MySql-5.0,MySql-5.0.8.1,MySql-5.1,MySql-5.1.4,MySql-5.2.3,MySql-6.1.3,MySql-6.2.2,Npgsql-1.0,Npgsql-2.0-beta1,Npgsql-2.0,DB2-9.0.0-1.1,DB2-9.0.0-2.0,DB2-9.1.0-1.1,DB2-9.1.0.2,iDB2-10.0.0.0,SQLite-1.0.43,SQLite-1.0.44,SQLite-1.0.47,SQLite-1.0.56,SQLite-1.0.65,SQLite-1.0.66,SQLite-1.0.72,SQLite-1.0.80,Firebird-2.1,SybaseAse-12,SybaseAse-15,SybaseAse-AdoNet2,IfxOdbc,IfxSQLI-3.0.0.2,IfxDRDA-9.0.0.2,Odbc-1.1,Odbc-2.0,Odbc-4.0,Cache-2.0.0.1]
+2017-04-25 22:28:40,264 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -    GetObjectInternal: obtaining instance for name System.Data.SqlClient => canonical name SqlServer-2.0
+2017-04-25 22:28:40,266 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'System.Data.SqlClient' with merged definition [RootObjectDefinition : Class [Spring.Data.Common.DbProvider]; Abstract = False; Parent = ; Scope = prototype; Singleton = False; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ; defined in = assembly [Spring.Data, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07], resource [Spring.Data.Common.dbproviders.xml] line 49].
+2017-04-25 22:28:40,267 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'System.Data.SqlClient'.
+2017-04-25 22:28:40,273 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'Spring.Data.Common.DbMetadata#14860C3' with merged definition [RootObjectDefinition : Class [Spring.Data.Common.DbMetadata]; Abstract = False; Parent = ; Scope = prototype; Singleton = False; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ; defined in = assembly [Spring.Data, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07], resource [Spring.Data.Common.dbproviders.xml] line 51].
+2017-04-25 22:28:40,275 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'Spring.Data.Common.DbMetadata#14860C3'.
+2017-04-25 22:28:40,313 [1] DEBUG Spring.Objects.Factory.Support.ConstructorResolver [(null)] - Object 'Spring.Data.Common.DbMetadata#14860C3' instantiated via constructor [Void .ctor(System.String, System.String, System.Type, System.Type, System.Type, System.Type, System.Type, System.String, System.Type, System.String, System.String, System.String, System.Type, Boolean, Boolean, Boolean, System.String)].
+2017-04-25 22:28:40,315 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'Spring.Data.Common.DbMetadata#14860C3'
+2017-04-25 22:28:40,331 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors before initialization of object 'Spring.Data.Common.DbMetadata#14860C3'
+2017-04-25 22:28:40,333 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors after initialization of object 'Spring.Data.Common.DbMetadata#14860C3'
+2017-04-25 22:28:40,335 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Calling code asked for normal instance for name 'Spring.Data.Common.DbMetadata#14860C3'.
+2017-04-25 22:28:40,339 [1] DEBUG Spring.Objects.Factory.Support.ConstructorResolver [(null)] - Object 'System.Data.SqlClient' instantiated via constructor [Void .ctor(Spring.Data.Common.IDbMetadata)].
+2017-04-25 22:28:40,340 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'System.Data.SqlClient'
+2017-04-25 22:28:40,343 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors before initialization of object 'System.Data.SqlClient'
+2017-04-25 22:28:40,345 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors after initialization of object 'System.Data.SqlClient'
+2017-04-25 22:28:40,347 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - GetObjectInternal: returning instance for objectname System.Data.SqlClient
+2017-04-25 22:28:40,350 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors after initialization of object 'DbProvider'
+2017-04-25 22:28:40,351 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -       GetObjectInternal: returning instance for objectname DbProvider
+2017-04-25 22:28:40,359 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors before initialization of object 'NHibernateSessionFactory'
+2017-04-25 22:28:40,360 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Calling AfterPropertiesSet() on object with name 'NHibernateSessionFactory'.
+2017-04-25 22:28:40,457 [1] INFO  NHibernate.Cfg.Environment [(null)] - NHibernate 4.1.1.GA (assembly 4.1.0.4000)
+2017-04-25 22:28:40,462 [1] INFO  NHibernate.Cfg.Environment [(null)] - hibernate-configuration section not found in application configuration file
+2017-04-25 22:28:40,464 [1] INFO  NHibernate.Cfg.Environment [(null)] - Bytecode provider name : lcg
+2017-04-25 22:28:40,467 [1] INFO  NHibernate.Cfg.Environment [(null)] - Using reflection optimizer
+2017-04-25 22:28:40,481 [1] INFO  NHibernate.Cfg.Configuration [(null)] - Searching for mapped documents in assembly: RennaisanceWebService
+2017-04-25 22:28:40,513 [1] ERROR NHibernate.Cfg.Configuration [(null)] - Could not add assembly RennaisanceWebService
+NHibernate.MappingException: Could not add assembly RennaisanceWebService ---> System.IO.FileNotFoundException: Could not load file or assembly 'RennaisanceWebService' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Cfg.Configuration.AddAssembly(String assemblyName)
+   --- End of inner exception stack trace ---
+2017-04-25 22:28:40,516 [1] ERROR Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -    GetObjectInternal: error obtaining object &NHibernateSessionFactory
+2017-04-25 22:28:40,517 [1] ERROR Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - GetObjectInternal: error obtaining object Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0
+2017-04-25 22:29:41,059 [1] DEBUG Spring.Context.Support.ContextHandler [(null)] - creating context 'spring.root'
+2017-04-25 22:29:41,118 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Refreshing object factory 
+2017-04-25 22:29:41,148 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loading XML object definitions from file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml]
+2017-04-25 22:29:41,187 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Using the following XmlReader implementation : System.Xml.XsdValidatingReader
+2017-04-25 22:29:41,193 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Loading object definitions.
+2017-04-25 22:29:41,197 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Loading object definitions...
+2017-04-25 22:29:41,199 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default lazy init 'false'.
+2017-04-25 22:29:41,199 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default dependency check 'none'.
+2017-04-25 22:29:41,201 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire 'no'.
+2017-04-25 22:29:41,202 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default merge 'false'.
+2017-04-25 22:29:41,203 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:29:41,204 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:29:41,205 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire candidates ''.
+2017-04-25 22:29:41,206 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:29:41,207 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:29:41,235 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'NHibernateSessionFactory'.
+2017-04-25 22:29:41,241 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0]
+2017-04-25 22:29:41,242 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:29:41,244 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor' for object with name 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:29:41,246 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'transactionManager'.
+2017-04-25 22:29:41,251 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'HibernateTemplate'.
+2017-04-25 22:29:41,254 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'AnnouncementDao'.
+2017-04-25 22:29:41,255 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'AnnouncementService'.
+2017-04-25 22:29:41,256 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Found 11 <object> elements defining objects.
+2017-04-25 22:29:41,257 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loaded 11 object definitions from location [~//SpringConfiguration.xml]
+2017-04-25 22:29:41,258 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - Refreshed ObjectFactory for application context 'spring.root'.
+2017-04-25 22:29:41,259 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Registering well-known processors and objects
+2017-04-25 22:29:41,262 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Custom post processing object factory
+2017-04-25 22:29:41,263 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Post processing object factory using pre-registered processors
+2017-04-25 22:29:41,264 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - 11 objects defined in application context [spring.root].
+2017-04-25 22:29:41,265 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Post processing object factory using defined processors
+2017-04-25 22:29:41,288 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:29:41,306 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:29:41,309 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:29:41,310 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - processed 0 IFactoryObjectPostProcessors defined in application context [spring.root].
+2017-04-25 22:29:41,313 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:29:41,317 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:29:41,322 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -    GetObjectInternal: obtaining instance for name Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0 => canonical name Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0
+2017-04-25 22:29:41,326 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating shared instance of singleton object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'
+2017-04-25 22:29:41,331 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0' with merged definition [RootObjectDefinition : Class [Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor]; Abstract = False; Parent = ; Scope = singleton; Singleton = True; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ; defined in = file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 38].
+2017-04-25 22:29:41,333 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:29:41,340 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Eagerly caching object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0' to allow for resolving potential circular references
+2017-04-25 22:29:41,342 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'
+2017-04-25 22:29:41,347 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Setting the ObjectFactory property on the IObjectFactoryAware object 'Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor#0'.
+2017-04-25 22:29:41,351 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Ignoring object class loading failure for object 'AnnouncementDao'
+Spring.Core.CannotLoadObjectTypeException: Cannot resolve type [Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService] for object with name 'AnnouncementDao' defined in file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 58 ---> System.TypeLoadException: Could not load type 'Rennaisance_WebService.Hibernate.HibernateAnnouncementDao' from assembly 'Rennaisance-WebService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at Spring.Core.TypeResolution.TypeResolver.LoadTypeDirectlyFromAssembly(TypeAssemblyHolder typeInfo) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 115
+   at Spring.Core.TypeResolution.TypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolver.cs:line 75
+   at Spring.Core.TypeResolution.GenericTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\GenericTypeResolver.cs:line 91
+   at Spring.Core.TypeResolution.CachedTypeResolver.Resolve(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\CachedTypeResolver.cs:line 107
+   at Spring.Core.TypeResolution.TypeResolutionUtils.ResolveType(String typeName) in c:\_prj\spring-net\src\Spring\Spring.Core\Core\TypeResolution\TypeResolutionUtils.cs:line 101
+   at Spring.Objects.Factory.Support.AbstractObjectDefinition.ResolveObjectType() in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectDefinition.cs:line 706
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1198
+   --- End of inner exception stack trace ---
+   at Spring.Objects.Factory.Support.AbstractObjectFactory.ResolveObjectType(RootObjectDefinition rod, String objectName) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractObjectFactory.cs:line 1206
+   at Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PredictObjectType(String objectName, RootObjectDefinition mod) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\AbstractAutowireCapableObjectFactory.cs:line 160
+   at Spring.Objects.Factory.Support.DefaultListableObjectFactory.DoGetObjectNamesForType(Type type, Boolean includeNonSingletons, Boolean allowEagerInit) in c:\_prj\spring-net\src\Spring\Spring.Core\Objects\Factory\Support\DefaultListableObjectFactory.cs:line 1040
+2017-04-25 22:29:41,356 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -       GetObjectInternal: obtaining instance for name &NHibernateSessionFactory => canonical name NHibernateSessionFactory
+2017-04-25 22:29:41,357 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating shared instance of singleton object 'NHibernateSessionFactory'
+2017-04-25 22:29:41,358 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'NHibernateSessionFactory' with merged definition [RootObjectDefinition : Class [Spring.Data.NHibernate.LocalSessionFactoryObject]; Abstract = False; Parent = ; Scope = singleton; Singleton = True; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ; defined in = file [C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\SpringConfiguration.xml] line 14].
+2017-04-25 22:29:41,359 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'NHibernateSessionFactory'.
+2017-04-25 22:29:41,361 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Eagerly caching object 'NHibernateSessionFactory' to allow for resolving potential circular references
+2017-04-25 22:29:41,362 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'NHibernateSessionFactory'
+2017-04-25 22:29:41,366 [1] DEBUG Spring.Objects.Factory.Support.ObjectDefinitionValueResolver [(null)] - Resolving reference from property 'DbProvider' in object 'NHibernateSessionFactory' to object 'DbProvider'.
+2017-04-25 22:29:41,367 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] -          GetObjectInternal: obtaining instance for name DbProvider => canonical name DbProvider
+2017-04-25 22:29:41,369 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating shared instance of singleton object 'DbProvider'
+2017-04-25 22:29:41,370 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Creating instance of Object 'DbProvider' with merged definition [RootObjectDefinition : Class [Spring.Data.Common.DbProviderFactoryObject]; Abstract = False; Parent = ; Scope = singleton; Singleton = True; LazyInit = False; Autowire = No; Autowire-Candidate = True; Primary = False; DependencyCheck = None; InitMethodName = ; DestroyMethodName = ; FactoryMethodName = ; FactoryObjectName = ].
+2017-04-25 22:29:41,372 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IInstantiationAwareObjectPostProcessors before the instantiation of 'DbProvider'.
+2017-04-25 22:29:41,373 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Eagerly caching object 'DbProvider' to allow for resolving potential circular references
+2017-04-25 22:29:41,375 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Configuring object using definition 'DbProvider'
+2017-04-25 22:29:41,407 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors before initialization of object 'DbProvider'
+2017-04-25 22:29:41,410 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Calling AfterPropertiesSet() on object with name 'DbProvider'.
+2017-04-25 22:29:41,413 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Invoking IObjectPostProcessors after initialization of object 'DbProvider'
+2017-04-25 22:29:41,414 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Cached shared instance of singleton object 'DbProvider'
+2017-04-25 22:29:41,417 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Object with name 'DbProvider' is a factory object.
+2017-04-25 22:29:41,419 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Dereferencing Object with name 'DbProvider'
+2017-04-25 22:29:41,423 [1] DEBUG Spring.Context.Support.XmlApplicationContext [(null)] - ApplicationContext Refresh: Refreshing object factory 
+2017-04-25 22:29:41,425 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Loading XML object definitions from assembly [Spring.Data, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07], resource [Spring.Data.Common.dbproviders.xml]
+2017-04-25 22:29:41,427 [1] DEBUG Spring.Objects.Factory.Xml.XmlObjectDefinitionReader [(null)] - Using the following XmlReader implementation : System.Xml.XsdValidatingReader
+2017-04-25 22:29:41,437 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Loading object definitions.
+2017-04-25 22:29:41,438 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Loading object definitions...
+2017-04-25 22:29:41,439 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default lazy init 'false'.
+2017-04-25 22:29:41,441 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default dependency check 'none'.
+2017-04-25 22:29:41,442 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire 'no'.
+2017-04-25 22:29:41,444 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default merge 'false'.
+2017-04-25 22:29:41,445 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:29:41,446 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:29:41,448 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default autowire candidates ''.
+2017-04-25 22:29:41,449 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default init method ''.
+2017-04-25 22:29:41,450 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Default destroy method ''.
+2017-04-25 22:29:41,455 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#4ED4DB]
+2017-04-25 22:29:41,458 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServer-1.1'.
+2017-04-25 22:29:41,459 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2C57BB6]
+2017-04-25 22:29:41,461 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServer-2.0'.
+2017-04-25 22:29:41,463 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#F1596E]
+2017-04-25 22:29:41,465 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServer-4.0'.
+2017-04-25 22:29:41,466 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.SqlClient' for object with name 'SqlServer-2.0'.
+2017-04-25 22:29:41,468 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#7C24E3]
+2017-04-25 22:29:41,470 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServerCe-3.1'.
+2017-04-25 22:29:41,472 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#5D4BFE]
+2017-04-25 22:29:41,473 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'SqlServerCe-3.5.1'.
+2017-04-25 22:29:41,475 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.SqlServerCe' for object with name 'SqlServerCe-3.5.1'.
+2017-04-25 22:29:41,476 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#347ABF0]
+2017-04-25 22:29:41,478 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OleDb-1.1'.
+2017-04-25 22:29:41,479 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1850B72]
+2017-04-25 22:29:41,481 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OleDb-2.0'.
+2017-04-25 22:29:41,483 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#1AD6705]
+2017-04-25 22:29:41,484 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OleDb-4.0'.
+2017-04-25 22:29:41,486 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.OleDb' for object with name 'OleDb-2.0'.
+2017-04-25 22:29:41,487 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3189F33]
+2017-04-25 22:29:41,489 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleClient-2.0'.
+2017-04-25 22:29:41,491 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'System.Data.OracleClient' for object with name 'OracleClient-2.0'.
+2017-04-25 22:29:41,492 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#3DD98CB]
+2017-04-25 22:29:41,494 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-2.0'.
+2017-04-25 22:29:41,495 [1] DEBUG Spring.Objects.Factory.Support.DefaultListableObjectFactory [(null)] - Registering alias 'Oracle.DataAccess.Client' for object with name 'OracleODP-2.0'.
+2017-04-25 22:29:41,497 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#2CA5F28]
+2017-04-25 22:29:41,499 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-11-2.0'.
+2017-04-25 22:29:41,500 [1] DEBUG Spring.Objects.Factory.Xml.ObjectDefinitionParserHelper [(null)] - Neither XML 'id' nor 'name' specified - using generated object name [Spring.Data.Common.DbMetadata#11D5869]
+2017-04-25 22:29:41,503 [1] DEBUG Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader [(null)] - Registering object definition with id 'OracleODP-11-4.0'.
