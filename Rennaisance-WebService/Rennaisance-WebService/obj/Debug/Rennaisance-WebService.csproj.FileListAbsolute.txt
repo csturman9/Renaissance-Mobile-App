@@ -85,3 +85,4 @@ C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Renna
 C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\bin\Common.Logging.Log4Net1211.pdb
 C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\bin\Common.Logging.Log4Net1211.xml
 C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\bin\log4net.xml
+C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\obj\Debug\Rennaisance-WebService.csprojResolveAssemblyReference.cache

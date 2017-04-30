@@ -11,33 +11,83 @@ namespace Rennaisance_WebService.Controllers
 {
     public class AnnouncementController : ApiController
     {
-        AnnouncementService Service { get; set; }
+        public AnnouncementService Service
+        {
+            get;
+            set;
+        }
 
         // GET: api/Announcement
         public IEnumerable<Announcement> Get()
         {
-            return Service.GetAllUsers();
+            return Service.GetAllAnnouncements();
         }
 
         // GET: api/Announcement/5
-        public string Get(int id)
+        public Announcement Get(string id)
         {
-            return "value";
+            return Service.GetAnnouncement(id);
         }
 
         // POST: api/Announcement
-        public void Post([FromBody]string value)
+        public HttpResponseMessage Post([FromBody]Announcement value)
         {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Service.Save(value);
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, "Invalid Model");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+
         }
 
         // PUT: api/Announcement/5
-        public void Put(int id, [FromBody]string value)
+        public HttpResponseMessage Put(string id, [FromBody]Announcement value)
         {
+            try
+            {
+                Announcement found = Service.GetAnnouncement(id);
+                found = value;
+                Service.Save(found);
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+
         }
 
         // DELETE: api/Announcement/5
-        public void Delete(int id)
+        public HttpResponseMessage Delete(string id)
         {
+            try
+            {
+                Announcement toDelete = Service.GetAnnouncement(id);
+                if (toDelete != null)
+                {
+                    Service.DeleteAnnouncement(toDelete);
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, "Could not find Record to delete");
+                }
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
     }
 }
