@@ -149,7 +149,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hibernate\HibernateAppointmentDao.cs" />
+    <Compile Include="Interface\IAppointmentDAO.cs" />
     <Compile Include="Models\Announcement.cs" />
+    <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Hibernate\HibernateAnnouncementDao.cs" />
     <Compile Include="Hibernate\HibernateDao.cs" />
