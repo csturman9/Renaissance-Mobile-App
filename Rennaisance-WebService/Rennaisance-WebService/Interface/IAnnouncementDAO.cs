@@ -1,11 +1,11 @@
-﻿using Rennaisance_WebService.Models;
+﻿using RennaisanceWebService.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rennaisance_WebService.Interface
+namespace RennaisanceWebService.Interface
 {
     public interface IAnnouncementDao : IDao<Announcement, string>, ISupportsSave<Announcement, string>, ISupportsDeleteDao<Announcement>
     {

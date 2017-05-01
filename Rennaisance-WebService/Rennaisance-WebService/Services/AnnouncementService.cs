@@ -1,12 +1,12 @@
-﻿using Rennaisance_WebService.Interface;
-using Rennaisance_WebService.Models;
+﻿using RennaisanceWebService.Interface;
+using RennaisanceWebService.Models;
 using Spring.Transaction.Interceptor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Rennaisance_WebService.Services
+namespace RennaisanceWebService.Services
 {
     public class AnnouncementService
     {

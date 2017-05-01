@@ -55,15 +55,15 @@
 
 
   <!-- DAO objects go here -->
-  <object id="AnnouncementDao" type="Rennaisance_WebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService">
+  <object id="AnnouncementDao" type="RennaisanceWebService.Hibernate.HibernateAnnouncementDao, Rennaisance-WebService">
     <property name="SessionFactory" ref="NHibernateSessionFactory"/>
   </object>
 
-  <object id="AnnouncementService" type="Rennaisance_WebService.Services.AnnouncementService, Rennaisance-WebService">
+  <object id="AnnouncementService" type="RennaisanceWebService.Services.AnnouncementService, Rennaisance-WebService">
     <property name="AnnouncementDao" ref="AnnouncementDao"/>
   </object>
 
-  <object id="AnnouncementController" type="Rennaisance_WebService.Controllers.AnnouncementController, Rennaisance-WebService" singleton ="false">
+  <object id="AnnouncementController" type="RennaisanceWebService.Controllers.AnnouncementController, Rennaisance-WebService" singleton ="false">
     <property name="Service" ref="AnnouncementService"/>
   </object>
 

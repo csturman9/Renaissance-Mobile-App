@@ -1,5 +1,5 @@
-﻿using Rennaisance_WebService.Interface;
-using Rennaisance_WebService.Models;
+﻿using RennaisanceWebService.Interface;
+using RennaisanceWebService.Models;
 using Spring.Stereotype;
 using Spring.Transaction.Interceptor;
 using System;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Rennaisance_WebService.Hibernate
+namespace RennaisanceWebService.Hibernate
 {
     [Repository]
     public class HibernateAnnouncementDao : HibernateDao, IAnnouncementDao
