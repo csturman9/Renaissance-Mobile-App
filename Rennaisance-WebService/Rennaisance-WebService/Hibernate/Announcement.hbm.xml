@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="Rennaisance-WebService" namespace="Rennaisance_WebService.Models">
-  <class name="Announcement" table="Announcement" dynamic-update="true" >
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+                   auto-import="true" 
+                   assembly="Rennaisance-WebService" 
+                   namespace="Rennaisance_WebService.Models">
+  <class name="Announcement">
     <cache usage="read-write"/>
     <id name="Id" column="Id" type="int">
       <generator class="native" />
     </id>
-    <property name="Title" Column ="TITLE" type="string"/>
-    <property name="Type"  Column ="ANN_TYPE" type="string" />
-    <property name="Time"  Column ="ANN_TIME"/>
-    <one-to-one name="UserId"
-            column="USER_ID"
-            class="User"/>
-    <property name="DateCreated" Column="UPDATED_DATE"/>   
-    
-    <subclass name="GeneralAnnouncement" discriminator-value="D">
+    <property name="Title"/>
+    <property name="Type"/>
+    <property name="Time"/>
+    <one-to-one name="UserId" class="User"/>
+    <property name="DateCreated"/>      
+    <subclass name="GeneralAnnouncement" extends="Announcement">
+      <key column="Id" />
       <property name="Topic" />
       <property name="Message" />
       <property name="AdditonalInformation" />
