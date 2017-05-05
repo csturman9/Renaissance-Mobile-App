@@ -1,12 +1,12 @@
-﻿using Rennaisance_WebService.Interface;
-using Rennaisance_WebService.Models;
+﻿using RennaisanceWebService.Interface;
+using RennaisanceWebService.Models;
 using Spring.Transaction.Interceptor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Rennaisance_WebService.Services
+namespace RennaisanceWebService.Services
 {
     public class AnnouncementService
     {
@@ -25,13 +25,13 @@ namespace Rennaisance_WebService.Services
         }
 
         [Transaction]
-        public virtual IList<Announcement> GetAllUsers()
+        public virtual IList<Announcement> GetAllAnnouncements()
         {
             return AnnouncementDao.GetAll();
         }
 
         [Transaction]
-        public virtual Announcement GetUser(string id)
+        public virtual Announcement GetAnnouncement(string id)
         {
             return AnnouncementDao.Get(id);
         }
@@ -43,13 +43,13 @@ namespace Rennaisance_WebService.Services
         }
 
         [Transaction]
-        public virtual void DeleteUser(Announcement announcement)
+        public virtual void DeleteAnnouncement(Announcement announcement)
         {
             AnnouncementDao.Delete(announcement);
         }
 
         [Transaction]
-        public virtual void UpdateUser(Announcement announcement)
+        public virtual void UpdateAnnouncement(Announcement announcement)
         {
             AnnouncementDao.Update(announcement);
         }

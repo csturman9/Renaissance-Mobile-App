@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <EmbeddedResource Include="Hibernate\Announcement.hbm.xml" />
     <Content Include="Log4Net.xml" />
     <Content Include="Logs\Log.txt" />
     <Content Include="SpringConfiguration.xml" />
@@ -146,9 +147,11 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AnnouncementController.cs" />
+    <Compile Include="Controllers\AnnouncementControllerOld.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IAnnouncement.cs" />
     <Compile Include="Models\Announcement.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Hibernate\HibernateAnnouncementDao.cs" />

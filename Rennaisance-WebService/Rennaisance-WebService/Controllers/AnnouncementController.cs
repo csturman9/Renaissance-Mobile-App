@@ -1,5 +1,5 @@
-﻿using Rennaisance_WebService.Models;
-using Rennaisance_WebService.Services;
+﻿using RennaisanceWebService.Models;
+using RennaisanceWebService.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,33 +11,22 @@ namespace Rennaisance_WebService.Controllers
 {
     public class AnnouncementController : ApiController
     {
-        AnnouncementService Service { get; set; }
-
-        // GET: api/Announcement
-        public IEnumerable<Announcement> Get()
+        public AnnouncementService Service
         {
-            return Service.GetAllUsers();
+            get;
+            set;
+        }
+
+        public IList<Announcement> Get()
+        {
+            return Service.GetAllAnnouncements();
         }
 
         // GET: api/Announcement/5
-        public string Get(int id)
+        public Announcement Get(string id)
         {
-            return "value";
+            return Service.GetAnnouncement(id);
         }
 
-        // POST: api/Announcement
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Announcement/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Announcement/5
-        public void Delete(int id)
-        {
-        }
     }
 }
