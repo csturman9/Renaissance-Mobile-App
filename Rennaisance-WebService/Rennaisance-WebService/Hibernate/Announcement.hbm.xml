@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
-                   auto-import="true" 
-                   assembly="Rennaisance-WebService" 
-                   namespace="Rennaisance_WebService.Models">
-  <class name="Announcement">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="RennaisanceWebService.Models.Announcement, Rennaisance-WebService" table="ANNOUNCEMENT" lazy="false" proxy="">
     <cache usage="read-write"/>
     <id name="Id" column="Id" type="int">
       <generator class="native" />
