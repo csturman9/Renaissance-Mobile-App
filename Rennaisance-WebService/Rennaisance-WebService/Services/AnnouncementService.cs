@@ -1,57 +1,47 @@
-﻿using RennaisanceWebService.Interface;
+﻿using RennaisanceWebService.Hibernate;
 using RennaisanceWebService.Models;
 using Spring.Transaction.Interceptor;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace RennaisanceWebService.Services
 {
     public class AnnouncementService
     {
-        private IAnnouncementDao announcementDao;
+        private AnnouncementDAO _repository;
 
-        public IAnnouncementDao AnnouncementDao
+       public AnnouncementService()
         {
-            get
-            {
-                return announcementDao;
-            }
-            set
-            {
-                announcementDao = value;
-            }
+            _repository = new AnnouncementDAO();
         }
 
         [Transaction]
-        public virtual IList<Announcement> GetAllAnnouncements()
+        public virtual IList<AnnouncementDTO> GetAllAnnouncements()
         {
-            return AnnouncementDao.GetAll();
+            return _repository.LoadAll();
         }
 
         [Transaction]
-        public virtual Announcement GetAnnouncement(string id)
+        public virtual AnnouncementDTO GetAnnouncement(long id)
         {
-            return AnnouncementDao.Get(id);
+            return _repository.LoadById(id);
         }
 
         [Transaction]
-        public virtual void Save(Announcement announcement)
+        public virtual void Save(AnnouncementDTO announcement)
         {
-            AnnouncementDao.Save(announcement);
+            _repository.Create(announcement);
         }
 
         [Transaction]
-        public virtual void DeleteAnnouncement(Announcement announcement)
+        public virtual void DeleteAnnouncement(AnnouncementDTO announcement)
         {
-            AnnouncementDao.Delete(announcement);
+            _repository.Delete(announcement);
         }
 
         [Transaction]
-        public virtual void UpdateAnnouncement(Announcement announcement)
+        public virtual void UpdateAnnouncement(AnnouncementDTO announcement)
         {
-            AnnouncementDao.Update(announcement);
+            _repository.Update(announcement);
         }
     }
 }

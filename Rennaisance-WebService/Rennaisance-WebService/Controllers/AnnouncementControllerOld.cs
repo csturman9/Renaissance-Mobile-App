@@ -20,25 +20,25 @@ namespace Rennaisance_WebService.Controllers
 
         [HttpGet]
         // GET: api/Announcement
-        public IList<Announcement> Get()
+        public IList<AnnouncementDTO> Get()
         {
             return Service.GetAllAnnouncements();
         }
 
         // GET: api/Announcement/5
-        public Announcement Get(string id)
+        public AnnouncementDTO Get(long id)
         {
             return Service.GetAnnouncement(id);
         }
 
         // POST: api/Announcement
         [HttpPost]
-        public HttpResponseMessage Post([FromBody]Announcement value)
+        public HttpResponseMessage Post([FromBody]AnnouncementDTO value)
         {
             try
             {
                 Service.Save(value);
-                var response = Request.CreateResponse<Announcement>(HttpStatusCode.Created, value);
+                var response = Request.CreateResponse<AnnouncementDTO>(HttpStatusCode.Created, value);
 
                 string uri = Url.Link("DefaultApi", new { id = value.Id });
                 response.Headers.Location = new Uri(uri);
@@ -54,11 +54,11 @@ namespace Rennaisance_WebService.Controllers
 
         [HttpPut]
         // PUT: api/Announcement/5
-        public HttpResponseMessage Put(string id, [FromBody]Announcement value)
+        public HttpResponseMessage Put(long id, [FromBody]AnnouncementDTO value)
         {
             try
             {
-                Announcement found = Service.GetAnnouncement(id);
+                AnnouncementDTO found = Service.GetAnnouncement(id);
                 found = value;
                 Service.Save(found);
                 return Request.CreateResponse(HttpStatusCode.OK);
@@ -72,11 +72,11 @@ namespace Rennaisance_WebService.Controllers
 
         [HttpDelete]
         // DELETE: api/Announcement/5
-        public HttpResponseMessage Delete(string id)
+        public HttpResponseMessage Delete(long id)
         {
             try
             {
-                Announcement toDelete = Service.GetAnnouncement(id);
+                AnnouncementDTO toDelete = Service.GetAnnouncement(id);
                 if (toDelete != null)
                 {
                     Service.DeleteAnnouncement(toDelete);

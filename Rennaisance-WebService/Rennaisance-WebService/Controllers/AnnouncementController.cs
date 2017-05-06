@@ -7,23 +7,25 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Rennaisance_WebService.Controllers
+namespace RennaisanceWebService.Controllers
 {
     public class AnnouncementController : ApiController
     {
-        public AnnouncementService Service
-        {
-            get;
-            set;
-        }
+        public AnnouncementService Service;
 
-        public IList<Announcement> Get()
+        public AnnouncementController()
+        {
+            Service = new AnnouncementService();
+        }
+        
+
+        public IList<AnnouncementDTO> Get()
         {
             return Service.GetAllAnnouncements();
         }
 
         // GET: api/Announcement/5
-        public Announcement Get(string id)
+        public AnnouncementDTO Get(long id)
         {
             return Service.GetAnnouncement(id);
         }
