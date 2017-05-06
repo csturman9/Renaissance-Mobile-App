@@ -26,6 +26,9 @@ namespace RennaisanceWebService.Models
         public virtual string Address { get; set; }
 
         [DataMember]
-        public virtual DateTime DateCreated { get; set; }
+        public virtual DateTime UpdatedDate { get; set; }
+
+        [DataMember]
+        public virtual DateTime UpdatedBy { get; set; }
     }
 }

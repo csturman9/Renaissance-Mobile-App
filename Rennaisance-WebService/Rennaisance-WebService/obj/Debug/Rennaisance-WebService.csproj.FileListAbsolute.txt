@@ -85,3 +85,4 @@ C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Renna
 C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\bin\System.Web.Http.WebHost.xml
 C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\obj\Debug\Rennaisance-WebService.dll
 C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\obj\Debug\Rennaisance-WebService.pdb
+C:\Users\Newton\Source\Repos\Renaissance-Mobile-App\Rennaisance-WebService\Rennaisance-WebService\obj\Debug\Rennaisance-WebService.csprojResolveAssemblyReference.cache

@@ -28,7 +28,7 @@ namespace RennaisanceWebService.Models
         public virtual string UpdatedBy { get; set; }
 
         [DataMember]
-        public virtual DateTime UpdateDate { get; set; }
+        public virtual DateTime UpdatedDate { get; set; }
 
         [DataMember]
         public virtual string Sermon { get; set; }
@@ -39,8 +39,7 @@ namespace RennaisanceWebService.Models
         [DataMember]
         public virtual string AdditionalInfo { get; set; }
 
-        [IgnoreDataMember]
-        [XmlIgnore]
+        [DataMember]
         public virtual UserDTO Host { get; set; }
     }
 
