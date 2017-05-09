@@ -42,7 +42,7 @@ namespace RennaisanceWebService.Models
         {
             TIdentifier identifier = new TIdentifier();
             using (TransactionScope transaction = new TransactionScope(TransactionScopeOption.Required))
-            {
+            {         
                 identifier = (TIdentifier)CurrentSession.Save(entity);
                 transaction.Complete();
             }

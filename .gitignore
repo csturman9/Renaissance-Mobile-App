@@ -1,3 +1,13 @@
 *.exe
 *.txt.*
+bin/Debug
+bin/Release
+obj/Debug
+*.user
+*.dll
+*.pdb
+logs
+Debug
+Release
+*.suo
 

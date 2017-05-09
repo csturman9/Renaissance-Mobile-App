@@ -17,7 +17,7 @@ namespace RennaisanceWebService.Services
         [Transaction]
         public virtual IList<AnnouncementDTO> GetAllAnnouncements()
         {
-            return _repository.LoadAll();
+            return _repository.GetAnnouncements();
         }
 
         [Transaction]
@@ -27,21 +27,26 @@ namespace RennaisanceWebService.Services
         }
 
         [Transaction]
-        public virtual void Save(AnnouncementDTO announcement)
-        {
-            _repository.Create(announcement);
+        public virtual void SaveAnnouncement(AnnouncementDTO announcement)
+        {         
+            _repository.InsertAnnouncement(announcement);
         }
 
         [Transaction]
         public virtual void DeleteAnnouncement(AnnouncementDTO announcement)
         {
-            _repository.Delete(announcement);
+            _repository.DeleteById(announcement.Id);
         }
 
         [Transaction]
         public virtual void UpdateAnnouncement(AnnouncementDTO announcement)
         {
             _repository.Update(announcement);
+        }
+
+        public virtual IList<AnnouncementDTO> GetAnnouncementByType(string type)
+        {
+            return _repository.LoadAnnouncementsByType(type);
         }
     }
 }

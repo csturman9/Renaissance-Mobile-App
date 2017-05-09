@@ -52,7 +52,7 @@
       <column name="UPDATED_DATE" sql-type="datetime" not-null="true" />
     </property>
     <property name="UpdatedBy">
-      <column name="UPDATED_BY" sql-type="datetime" not-null="true" />
+      <column name="UPDATED_BY" sql-type="varchar" not-null="true" />
     </property>
   </class>
 </hibernate-mapping>

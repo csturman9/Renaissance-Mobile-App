@@ -20,37 +20,43 @@ namespace RennaisanceWebService.Hibernate
             }
         }
 
+        public void InsertAnnouncement(AnnouncementDTO dto)
+        {
+            if(dto.Host != null)
+            {
+                CurrentSession.Save(dto.Host);
+            }
+            Create(dto);
+        }
 
+        public AnnouncementDTO GetAnnouncementById(long id)
+        {
+            var announcement = LoadById(id);
+            return announcement;
+        }
 
+        public IList<AnnouncementDTO> GetAnnouncements()
+        {       
+            var announcements = LoadAll();
+            return announcements;
+        }
 
-        //[Transaction(ReadOnly = false)]
-        //public void Delete(AnnouncementDTO entity)
-        //{
-        //    CurrentSession.Delete(entity);
-        //}
+        public IList<AnnouncementDTO> LoadAnnouncementsByType(String type)
+        {
+            return CurrentSession
+                    .CreateQuery("from AnnouncementDTO announcement where announcement.Type=?")
+                    .SetParameter(0, type)
+                    .List<AnnouncementDTO>();
+        }
 
-        //[Transaction(ReadOnly = true)]
-        //public AnnouncementDTO Get(string id)
-        //{
-        //    return CurrentSession.Get<AnnouncementDTO>(id);
-        //}
+        public void SaveAnnouncement(AnnouncementDTO dto)
+        {
+            if (dto.Host != null)
+            {
+                CurrentSession.SaveOrUpdate(dto.Host);
+            }
+            SaveOrUpdate(dto);
+        }
 
-        //[Transaction(ReadOnly = true)]
-        //public IList<AnnouncementDTO> GetAll()
-        //{
-        //    return GetAll<AnnouncementDTO>();
-        //}
-
-        //[Transaction(ReadOnly = false)]
-        //public string Save(AnnouncementDTO entity)
-        //{
-        //    return (string)CurrentSession.Save(entity);
-        //}
-
-        //[Transaction(ReadOnly = false)]
-        //public void Update(AnnouncementDTO entity)
-        //{
-        //    CurrentSession.SaveOrUpdate(entity);
-        //}
     }
 }
