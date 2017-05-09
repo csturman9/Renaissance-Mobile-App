@@ -11,3 +11,4 @@ Debug
 Release
 *.suo
 
+/.vs/VSWorkspaceState.json
