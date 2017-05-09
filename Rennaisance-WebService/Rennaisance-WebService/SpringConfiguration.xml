@@ -5,9 +5,13 @@
    xmlns:tx="http://www.springframework.net/tx">
 
   <!-- Database Configuration -->
-  <db:provider id="DbProvider"
+  <!-- <db:provider id="DbProvider" -->
+                   <!-- provider="System.Data.SqlClient" -->
+                   <!-- connectionString="Data Source=NEWTON-PC\SQLEXPRESS;Initial Catalog=Renn_App_DB;Integrated Security=True"/> -->
+				   
+<db:provider id="DbProvider"
                    provider="System.Data.SqlClient"
-                   connectionString="Data Source=NEWTON-PC\SQLEXPRESS;Initial Catalog=Renn_App_DB;Integrated Security=True"/>
+                   connectionString="Data Source=COLE-PC\SQLEXPRESS;Initial Catalog=Renn_App_DB;Integrated Security=True"/>
 
 
   <!-- configure session factory -->
