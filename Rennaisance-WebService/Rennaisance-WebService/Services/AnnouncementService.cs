@@ -1,57 +1,52 @@
-﻿using Rennaisance_WebService.Interface;
-using Rennaisance_WebService.Models;
+﻿using RennaisanceWebService.Hibernate;
+using RennaisanceWebService.Models;
 using Spring.Transaction.Interceptor;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace Rennaisance_WebService.Services
+namespace RennaisanceWebService.Services
 {
     public class AnnouncementService
     {
-        private IAnnouncementDao announcementDao;
+        private AnnouncementDAO _repository;
 
-        public IAnnouncementDao AnnouncementDao
+       public AnnouncementService()
         {
-            get
-            {
-                return announcementDao;
-            }
-            set
-            {
-                announcementDao = value;
-            }
+            _repository = new AnnouncementDAO();
         }
 
         [Transaction]
-        public virtual IList<Announcement> GetAllUsers()
+        public virtual IList<AnnouncementDTO> GetAllAnnouncements()
         {
-            return AnnouncementDao.GetAll();
+            return _repository.GetAnnouncements();
         }
 
         [Transaction]
-        public virtual Announcement GetUser(string id)
+        public virtual AnnouncementDTO GetAnnouncement(long id)
         {
-            return AnnouncementDao.Get(id);
+            return _repository.LoadById(id);
         }
 
         [Transaction]
-        public virtual void Save(Announcement announcement)
-        {
-            AnnouncementDao.Save(announcement);
+        public virtual void SaveAnnouncement(AnnouncementDTO announcement)
+        {         
+            _repository.InsertAnnouncement(announcement);
         }
 
         [Transaction]
-        public virtual void DeleteUser(Announcement announcement)
+        public virtual void DeleteAnnouncement(AnnouncementDTO announcement)
         {
-            AnnouncementDao.Delete(announcement);
+            _repository.DeleteById(announcement.Id);
         }
 
         [Transaction]
-        public virtual void UpdateUser(Announcement announcement)
+        public virtual void UpdateAnnouncement(AnnouncementDTO announcement)
         {
-            AnnouncementDao.Update(announcement);
+            _repository.Update(announcement);
+        }
+
+        public virtual IList<AnnouncementDTO> GetAnnouncementByType(string type)
+        {
+            return _repository.LoadAnnouncementsByType(type);
         }
     }
 }

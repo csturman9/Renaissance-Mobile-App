@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="Rennaisance-WebService" namespace="RennaisanceWebService.Models" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AnnouncementDTO" table="ANNOUNCEMENT" lazy="true" >
+    <id name="Id" column="ANNOUNCEMENT_ID">
+      <generator class="identity" />
+    </id>
+    <property name="Title">
+      <column name="TITLE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Type">
+      <column name="ANN_TYPE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="EventTime">
+      <column name="ANN_TIME" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Sermon">
+      <column name="SERMON" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Hymns">
+      <column name="HYMNS" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UpdatedBy">
+      <column name="UPDATED_BY" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="UpdatedDate">
+      <column name="UPDATED_DATE" sql-type="datetime" not-null="true" />
+    </property>
+    <many-to-one name="Host">
+      <column name="USER_ID" sql-type="int" not-null="false" />
+    </many-to-one>
+  </class>
+  <class name="UserDTO" table="APP_USER" lazy="true" >
+    <id name="Id" column="USER_ID">
+      <generator class="identity" />
+    </id>    
+    <property name="FirstName">
+      <column name="FIRST_NAME" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LastName">
+      <column name="LAST_NAME" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Phone">
+      <column name="PHONE" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Email">
+      <column name="EMAIL" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Address">
+      <column name="ADDRESS" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="UpdatedDate">
+      <column name="UPDATED_DATE" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="UpdatedBy">
+      <column name="UPDATED_BY" sql-type="varchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

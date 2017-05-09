@@ -1,5 +1,5 @@
-﻿using Rennaisance_WebService.Models;
-using Rennaisance_WebService.Services;
+﻿using RennaisanceWebService.Models;
+using RennaisanceWebService.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,37 +7,91 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Rennaisance_WebService.Controllers
+namespace RennaisanceWebService.Controllers
 {
     public class AnnouncementController : ApiController
     {
-        AnnouncementService Service { get; set; }
+        public AnnouncementService Service;
 
-        // GET: api/Announcement
-        public IEnumerable<Announcement> Get()
+        public AnnouncementController()
         {
-            return Service.GetAllUsers();
+            Service = new AnnouncementService();
+        }     
+
+        public IList<AnnouncementDTO> Get()
+        {
+            return Service.GetAllAnnouncements();
         }
 
         // GET: api/Announcement/5
-        public string Get(int id)
+        public AnnouncementDTO Get(long id)
         {
-            return "value";
+            return Service.GetAnnouncement(id);
         }
 
-        // POST: api/Announcement
-        public void Post([FromBody]string value)
+        public HttpResponseMessage Post([FromBody]AnnouncementDTO value)
         {
+            try
+            {              
+                Service.SaveAnnouncement(value);
+                var response = Request.CreateResponse<AnnouncementDTO>(HttpStatusCode.Created, value);
+
+                string uri = Url.Link("DefaultApi", new { id = value.Id });
+                response.Headers.Location = new Uri(uri);
+                return response;
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+
         }
 
         // PUT: api/Announcement/5
-        public void Put(int id, [FromBody]string value)
+        public HttpResponseMessage Put(long id, [FromBody]AnnouncementDTO value)
         {
+            try
+            {
+                AnnouncementDTO found = Service.GetAnnouncement(id);
+                found = value;
+                Service.SaveAnnouncement(found);
+                return Request.CreateResponse(HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
 
         // DELETE: api/Announcement/5
-        public void Delete(int id)
+        public HttpResponseMessage Delete(long id)
         {
+            try
+            {
+                AnnouncementDTO toDelete = Service.GetAnnouncement(id);
+                if (toDelete != null)
+                {
+                    Service.DeleteAnnouncement(toDelete);
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, "Could not find Record to delete");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
+
+        [HttpGet]
+        public IList<AnnouncementDTO> GetAnnouncementByType(String type)
+        {           
+            var announcements = Service.GetAnnouncementByType(type);            
+            return announcements;            
+        }
+
     }
 }

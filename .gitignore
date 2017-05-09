@@ -1,5 +1,13 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+*.exe
+*.txt.*
+bin/Debug
+bin/Release
+obj/Debug
+*.user
+*.dll
+*.pdb
+logs
+Debug
+Release
+*.suo
 
-/.vs/VSWorkspaceState.json
